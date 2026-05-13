@@ -1,0 +1,150 @@
+/* SWM CLUB - Proud & Masculine */
+:root {
+    --navy: #0a1428;
+    --red: #c8102e;
+    --white: #f8f8f8;
+    --gray: #bbbbbb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+nav {
+    background: rgba(10, 20, 40, 0.95);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 3px solid var(--red);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 600;
+}
+
+.cta-btn {
+    background: var(--red);
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(10,20,40,0.75), rgba(10,20,40,0.85)), url('assets/images/hero-warrior.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: var(--red);
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    max-width: 800px;
+    margin: 1.5rem auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 32px;
+    margin: 0 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.primary {
+    background: var(--red);
+    color: white;
+}
+
+.primary:hover {
+    background: white;
+    color: var(--red);
+    transform: scale(1.05);
+}
+
+.secondary {
+    background: transparent;
+    color: white;
+    border: 3px solid white;
+}
+
+.teaser, .merch-teaser {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.merch-item {
+    background: #1a253f;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 3rem;
+    background: #050a14;
+    font-size: 0.9rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 3rem; }
+    .hero-content h2 { font-size: 2.2rem; }
+    .nav-links { display: none; } /* Add hamburger later in JS */
+}
